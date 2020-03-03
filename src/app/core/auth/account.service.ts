@@ -38,6 +38,7 @@ export class AccountService {
           return of(null);
         }),
         tap((account: Account | null) => {
+          console.log('account', account)
           this.authenticate(account);
 
           if (account) {
